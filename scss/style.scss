@@ -1,0 +1,81 @@
+// #915d60
+
+:root {
+    --bg-color: #fcfcfc;
+    --main-color: #000000;
+    --main-hover-color: #3f3f3f;
+    --second-color: #25161b;
+    --third-color: #4f4c4c;
+    --nav-text-color: #080808;
+    --nav-text-hover-color: #bfbeb6;
+    --heading-color: 
+    #ffffff;
+    --small-text-color: #c7c7c7;
+    --very-small-text-color: #dbdbdb;
+}
+
+@font-face {
+  font-family: Tan-Pearl;
+  src: url('../assets/font/tan-pearl.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: Bangan-Expanded;
+    src: url('../assets/font/Balgan-Expanded.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GlacialIndifference;
+    src: url('../assets/font/GlacialIndifference.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'GlacialIndifference', sans-serif;
+}
+
+
+
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-family: "Tan-Pearl", serif;
+    color: var(--main-color);
+}
+
+h2 {
+    font-family: "Bangan-Expanded", serif;
+    color: var(--second-color);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+
+    &_name {
+        &--title {
+            color: var(--main-color);
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        &--subtitle {
+            text-transform: uppercase;
+            color: var(--third-color);
+            font-size: 1.6rem;
+        }
+    }
+}

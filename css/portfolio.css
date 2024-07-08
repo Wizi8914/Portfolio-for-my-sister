@@ -1,0 +1,264 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
+.portfolio {
+  margin: 100px 40px 20px;
+}
+.portfolio-sort {
+  position: relative;
+  display: flex;
+  padding: 0.5em 0;
+  margin: 1em 0;
+}
+.portfolio-sort--underline {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  width: 4em;
+  background: #222;
+  height: 0.25em;
+  mix-blend-mode: initial;
+  transition: transform 0.5s ease-in-out;
+}
+.portfolio-sort--item {
+  display: inline-block;
+  width: 4em;
+  padding: 0.5em 0;
+  text-align: center;
+  cursor: pointer;
+}
+.portfolio-sort--item:hover {
+  color: var(--third-color);
+}
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 25px;
+  grid-auto-rows: 1fr;
+}
+.portfolio-container::before {
+  content: "";
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1/1;
+  grid-column: 1/1;
+}
+.portfolio-container > *:first-child {
+  grid-row: 1/1;
+  grid-column: 1/1;
+}
+.portfolio-container__item {
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+}
+.portfolio-container__item i {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  color: var(--bg-color);
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.portfolio-container__item--image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  transition-duration: 0.3s;
+}
+.portfolio-container__item:hover img {
+  transition-duration: 0.3s;
+  filter: brightness(0.6);
+}
+.portfolio-container__item:hover i {
+  opacity: 1;
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 2;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+.lightbox-right, .lightbox-left {
+  font-size: 6em;
+  background: transparent;
+  color: var(--bg-color);
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.lightbox-right:hover, .lightbox-left:hover {
+  filter: brightness(0.7);
+}
+.lightbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-min-content;
+  width: min-content;
+  height: 90%;
+  width: 70%;
+  position: relative;
+}
+.lightbox-container__information {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+.lightbox-container__information--title {
+  margin-bottom: 10px;
+}
+.lightbox-container__information--description {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+.lightbox-container--image {
+  height: 100%;
+  width: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: rgb(37, 37, 37);
+}
+.lightbox-container__button {
+  color: var(--main-color);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  font-size: 2em;
+}
+.lightbox-container__button--full, .lightbox-container__button--download {
+  color: var(--main-color);
+}
+.lightbox-container__button--full:hover, .lightbox-container__button--download:hover {
+  color: var(--second-color);
+}
+.lightbox:target {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  opacity: 1 !important;
+  z-index: 999;
+  overflow-x: hidden;
+}
+.lightbox__button {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  width: 2.2em;
+  height: 2.2em;
+  color: var(--bg-color);
+  border: 0.15em solid var(--bg-color);
+  margin: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.lightbox__button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  z-index: -1;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  transition: all 0.25s ease-in-out;
+}
+
+.carousel-container {
+  height: 100%;
+  width: inherit;
+}
+
+.carousel {
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+.carousel__controls, .carousel__activator {
+  display: none;
+}
+.carousel__controls {
+  display: block;
+  opacity: 1;
+}
+.carousel__control {
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  top: 50%;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  opacity: 0.35;
+  outline: 0;
+  z-index: 3;
+}
+.carousel__control:hover {
+  opacity: 1;
+}
+.carousel__control--backward {
+  left: 10px;
+  transform: rotate(-135deg);
+}
+.carousel__control--forward {
+  right: 10px;
+  transform: rotate(45deg);
+}
+.carousel__indicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.carousel__indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  display: inline-block;
+  z-index: 2;
+  background-color: #fafafa;
+  cursor: pointer;
+  opacity: 0.35;
+  margin: 0 2.5px 0 2.5px;
+}
+.carousel__indicator:hover {
+  opacity: 0.75;
+}
+.carousel__track {
+  height: 100%;
+  width: -webkit-fill-available;
+  transition: transform 0.5s ease 0s;
+}
+.carousel__slide {
+  height: 100%;
+  width: inherit;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background: rgb(37, 37, 37);
+}/*# sourceMappingURL=portfolio.css.map */

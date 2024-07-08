@@ -1,0 +1,45 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  background-color: var(--heading-color);
+}
+header .header_logo {
+  margin-left: 40px;
+}
+header .header_logo--img {
+  width: 90px;
+}
+header .header_nav {
+  margin-right: 40px;
+}
+header .header_nav--link {
+  color: var(--nav-text-color);
+  font-size: 1.4rem;
+  position: relative;
+  margin: 0 10px 0;
+  transition: color 0.3s;
+}
+header .header_nav--link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--nav-text-color);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+header .header_nav--link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}/*# sourceMappingURL=header.css.map */
