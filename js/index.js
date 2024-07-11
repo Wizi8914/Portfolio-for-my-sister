@@ -4,6 +4,10 @@ const lightbox = document.querySelectorAll('.lightbox');
 
 // PRELOAD //
 
+window.addEventListener("load", () => {
+    document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     if (window.location.href.includes('#img')) {
         toogleScroll();

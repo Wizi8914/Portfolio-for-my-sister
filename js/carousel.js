@@ -1,4 +1,5 @@
 const carousels = document.querySelectorAll(".carousel");
+const carouselButtons = document.querySelectorAll(".carousel-btn");
 
 carousels.forEach((carousel, index) => {
     let carouselActivator = [];
@@ -60,6 +61,9 @@ slideCarousel = (carousel, index) => {
     let crlIndicator = carousels[carousel].children[carousels[carousel].children.length - 1].children;
     let crlSlide = carousels[carousel].children[carousels[carousel].children.length - 2].children;
 
+    carouselButtons[carousel].children[0].href = crlSlide[index].src;
+    carouselButtons[carousel].children[1].href = crlSlide[index].src;    
+
     for (let i = 0; i < crlActivator.length; i++) {
 
         if (crlActivator[i].checked) {
@@ -81,7 +85,6 @@ slideCarousel = (carousel, index) => {
 
 moveCarousel = (carousel, direction) => {
     let crlActivator = carousels[carousel].querySelectorAll(".carousel__activator");
-
     for (let i = 0; i < crlActivator.length; i++) {
         if (crlActivator[i].checked) {
 
