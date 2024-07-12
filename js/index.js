@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// VIDEO THUMBNAIL //
+
+const videoThumbnails = document.querySelectorAll('.portfolio-container__item video');
+
+videoThumbnails.forEach(video => {
+    video.currentTime = 1;
+    video.pause();
+})
+
+
 // LIGHTBOX SORT //
 
 const portfolioSortItem = document.querySelectorAll('.portfolio-sort--item');

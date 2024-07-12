@@ -38,13 +38,15 @@ body.no-scroll {
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 25px;
   grid-auto-rows: 1fr;
-}
-.portfolio-container::before {
-  content: "";
-  width: 0;
-  padding-bottom: 100%;
-  grid-row: 1/1;
-  grid-column: 1/1;
+  /*
+  &::before {
+      content: '';
+      width: 0;
+      padding-bottom: 100%;
+      grid-row: 1 / 1;
+      grid-column: 1 / 1;
+  }
+  */
 }
 .portfolio-container > *:first-child {
   grid-row: 1/1;

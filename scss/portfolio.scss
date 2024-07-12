@@ -51,6 +51,7 @@ body.no-scroll {
         grid-gap: $cell-margin;
         grid-auto-rows: 1fr;
 
+        /*
         &::before {
             content: '';
             width: 0;
@@ -58,6 +59,7 @@ body.no-scroll {
             grid-row: 1 / 1;
             grid-column: 1 / 1;
         }
+        */
 
         & > *:first-child {
             grid-row: 1 / 1;

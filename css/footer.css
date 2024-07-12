@@ -1,5 +1,6 @@
 footer .footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 0 40px;
 }
@@ -17,37 +18,60 @@ footer .footer-left__copyright {
 }
 footer .footer-right {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
 }
-footer .footer-right__social {
+footer .footer-right-top {
+  display: flex;
+}
+footer .footer-right-top__contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-right-top__contact--phone {
+  color: var(--nav-text-color);
+  margin: 0 5px;
+}
+footer .footer-right-top__contact--mail {
+  color: var(--nav-text-color);
+  margin: 0 5px;
+}
+footer .footer-right-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-right-bottom__social {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer .footer-right__social--link {
+footer .footer-right-bottom__social--link {
   color: var(--nav-text-color);
   margin: 0 5px;
   font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
 }
-footer .footer-right__social--link:hover {
+footer .footer-right-bottom__social--link:hover {
   color: var(--nav-text-hover-color);
 }
-footer .footer-right--separator {
+footer .footer-right-bottom--separator {
   width: 1px !important;
   height: 20px;
   background-color: #969696;
   margin: 0 5px;
 }
-footer .footer-right__navbar--link {
+footer .footer-right-bottom__navbar--link {
   color: var(--nav-text-color);
   font-size: 1.2rem;
   position: relative;
   margin: 0 5px 0;
   transition: color 0.3s;
 }
-footer .footer-right__navbar--link::before {
+footer .footer-right-bottom__navbar--link::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -60,20 +84,7 @@ footer .footer-right__navbar--link::before {
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
-footer .footer-right__navbar--link:hover::before {
+footer .footer-right-bottom__navbar--link:hover::before {
   transform-origin: left;
   transform: scaleX(1);
-}
-footer .footer__contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-footer .footer__contact--phone {
-  color: var(--nav-text-color);
-  margin: 0 10px;
-}
-footer .footer__contact--mail {
-  color: var(--nav-text-color);
-  margin: 0 10px;
 }/*# sourceMappingURL=footer.css.map */
