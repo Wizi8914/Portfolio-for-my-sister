@@ -8,7 +8,7 @@ header .header {
   justify-content: space-between;
   align-items: center;
   height: auto;
-  background-color: var(--heading-color);
+  background-color: var(--bg-color);
 }
 header .header_logo {
   margin-left: 40px;

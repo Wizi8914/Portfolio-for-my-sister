@@ -6,12 +6,21 @@
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/contact.css">
         <link rel="stylesheet" href="../css/miscs.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/5991870b6e.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
         <title>Lilie Konieczny - Acceuil</title>
     </head>
     <body>
+        <div class="warning">
+            <p class="warning-text">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Ce site est en cours de développement. Certaines fonctionnalités ne sont pas encore disponibles.
+                
+            </p>
+        </div>
         <header>
             <div class="header">
                 <a href="../index.html" class="header_logo">
@@ -25,5 +34,77 @@
                 </nav>
             </div>
         </header>
+
+        <form class="form" action="">
+            <h1 class="form-title">Formulaire de contact</h1>
+            <div class="form-name">
+                <div class="searchbox">
+                    <input class="searchbox--input" placeholder="Nom" type="text" id="fname" name="fname">
+                    <label for="fname" class="searchbox--label">Nom</label>
+                </div>
+                <div class="searchbox">
+                    <input class="searchbox--input" placeholder="Prénom" type="text" id="fname" name="lname">
+                    <label for="lname" class="searchbox--label">Prénom</label>
+                </div>
+            </div>
+            <div class="searchbox">
+                <input class="searchbox--input" id="" name="email" type="email" placeholder="Email">
+                <label for="name" class="searchbox--label">Email</label>
+            </div>
+            <div class="searchbox">
+                <input class="searchbox--input" id="" name="objet" type="input" placeholder="Objet">
+                <label for="name" class="searchbox--label">Objet</label>
+            </div>
+            <div class="searchbox">
+                <input class="searchbox--input" id="" name="message" type="input" placeholder="Message">
+                <label for="name" class="searchbox--label">Message</label>
+            </div>
+            <button type="submit">Envoyer</button>
+            
+        </form>
+        <footer>
+            <div class="footer">
+                <div class="footer-left">
+                    <div class="footer-left__logo">
+                        <img src="../assets/images/logo.png" alt="Logo" class="footer-left__logo--img" />
+                    </div>
+                    <p class="footer-left__copyright">
+                        Copyright © 2024 - <span id="currentYear">2024</span> Tous droits réservés.
+                    </p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-right-top">
+                        <div class="footer-right-top__contact">
+                            <a href="mailto:lilie.konieczny@gmail.com" class="footer-right-top__contact--mail">
+                                <i class="fa-solid fa-envelope"></i> lilie.konieczny@gmail.com
+                            </a>
+                            <a href="tel:+33668650475" class="footer-right-top__contact--phone">
+                                <i class="fa-solid fa-phone"></i> +33668650475
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-right-bottom">
+                        <div class="footer-right-bottom__social">
+                            <a href="https://www.instagram.com/lilieko.art/" class="footer-right-bottom__social--link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lilie-konieczny-392678228/" class="footer-right-bottom__social--link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.artstation.com/liliekonieczny3" class="footer-right-bottom__social--link">
+                                <i class="fab fa-artstation"></i>
+                            </a>
+                        </div>
+                        <li class="footer-right-bottom--separator"></li>
+                        <nav class="footer-right-bottom__navbar">
+                            <a href="../index.html" class="footer-right-bottom__navbar--link">Accueil</a>
+                            <a href="./portfolio.html" class="footer-right-bottom__navbar--link">Portfolio</a>
+                            <a href="./a-propos.html" class="footer-right-bottom__navbar--link">À propos</a>
+                            <a href="./contact.html" class="footer-right-bottom__navbar--link">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

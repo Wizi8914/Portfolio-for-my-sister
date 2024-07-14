@@ -1,0 +1,82 @@
+.form {
+  padding: 50px 30px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(237, 237, 237);
+}
+.form-title {
+  font-size: 2rem;
+  color: var(--heading-color);
+  margin-left: 15px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+.form-name {
+  display: flex;
+}
+.form-name .searchbox {
+  width: 100%;
+}
+
+.searchbox {
+  position: relative;
+  padding: 17px 0 15px;
+  margin: 0 15px;
+}
+.searchbox--input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--third-color);
+  outline: 0;
+  font-size: 1.3rem;
+  color: var(--heading-color);
+  padding: 5px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.searchbox--input::-moz-placeholder {
+  color: transparent;
+}
+.searchbox--input::placeholder {
+  color: transparent;
+}
+.searchbox--input:-moz-placeholder-shown ~ .searchbox--label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.searchbox--input:placeholder-shown ~ .searchbox--label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.searchbox--input:required, .searchbox--input:invalid {
+  box-shadow: none;
+}
+.searchbox--input:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, var(--main-color), #535353);
+     border-image: linear-gradient(to right, var(--main-color), #535353);
+  border-image-slice: 1;
+}
+.searchbox--input:focus ~ .searchbox--label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--main-color);
+  font-weight: 700;
+}
+.searchbox--label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--third-color);
+}/*# sourceMappingURL=contact.css.map */

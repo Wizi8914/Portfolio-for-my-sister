@@ -9,7 +9,7 @@
     --nav-text-color: #080808;
     --nav-text-hover-color: #4d4d4d;
     --heading-color: 
-    #ffffff;
+    #181818;
     --small-text-color: #c7c7c7;
     --very-small-text-color: #dbdbdb;
 }
@@ -34,6 +34,22 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+
+.warning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(216, 216, 0);
+    &-text {
+        color: var(--main-color);
+        font-size: 1.2rem;
+        margin: 15px 0;
+    }
+}
+
+
 
 * {
     font-family: 'GlacialIndifference', sans-serif;
