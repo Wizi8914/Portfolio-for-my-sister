@@ -10,6 +10,15 @@
         <link rel="stylesheet" href="../css/miscs.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://kit.fontawesome.com/5991870b6e.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init({
+                publicKey: "9nvMa1dvDxfsRlRx_",
+                });
+            })();
+        </script>
         <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
         <title>Lilie Konieczny - Acceuil</title>
     </head>
@@ -46,20 +55,20 @@
                     <label for="fname" class="searchbox--label">Nom</label>
                 </div>
                 <div class="searchbox">
-                    <input class="searchbox--input" placeholder="Prénom" type="text" id="fname" name="lname" required>
+                    <input class="searchbox--input" placeholder="Prénom" type="text" id="lname" name="lname" required>
                     <label for="lname" class="searchbox--label">Prénom</label>
                 </div>
             </div>
             <div class="searchbox">
-                <input class="searchbox--input" id="" name="email" type="email" placeholder="Email" required>
+                <input class="searchbox--input" id="email" name="email" type="email" placeholder="Email" required>
                 <label for="name" class="searchbox--label">Email</label>
             </div>
             <div class="searchbox">
-                <input class="searchbox--input" id="" name="objet" type="input" placeholder="Objet" required>
+                <input class="searchbox--input" id="object" name="objet" type="input" placeholder="Objet" required>
                 <label for="name" class="searchbox--label">Objet</label>
             </div>
             <div class="searchbox">
-                <input class="searchbox--input" id="" name="message" type="input" placeholder="Message">
+                <input class="searchbox--input" id="message" name="message" type="input" placeholder="Message">
                 
                 <label for="name" class="searchbox--label">Message</label>
             </div>
