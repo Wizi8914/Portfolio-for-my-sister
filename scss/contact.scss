@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     background: rgb(237 237 237);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     &-title {
         font-size: 2rem;
@@ -21,6 +22,22 @@
         .searchbox {
             width: 100%;
         }
+    }
+    
+    &--button {
+        margin-top: 20px;
+        margin-left: 15px;
+        width: 100px;
+        height: 40px;
+        background: var(--main-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background: var(--third-color);
+        }
+    
     }
 
 }

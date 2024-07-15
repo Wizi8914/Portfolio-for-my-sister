@@ -14,6 +14,8 @@
         <title>Lilie Konieczny - Acceuil</title>
     </head>
     <body>
+        
+        
         <div class="warning">
             <p class="warning-text">
                 <i class="fa-solid fa-triangle-exclamation"></i>
@@ -21,6 +23,7 @@
                 
             </p>
         </div>
+    
         <header>
             <div class="header">
                 <a href="../index.html" class="header_logo">
@@ -35,31 +38,32 @@
             </div>
         </header>
 
-        <form class="form" action="">
+        <form class="form">
             <h1 class="form-title">Formulaire de contact</h1>
             <div class="form-name">
                 <div class="searchbox">
-                    <input class="searchbox--input" placeholder="Nom" type="text" id="fname" name="fname">
+                    <input class="searchbox--input" placeholder="Nom" type="text" id="fname" name="fname" required>
                     <label for="fname" class="searchbox--label">Nom</label>
                 </div>
                 <div class="searchbox">
-                    <input class="searchbox--input" placeholder="Prénom" type="text" id="fname" name="lname">
+                    <input class="searchbox--input" placeholder="Prénom" type="text" id="fname" name="lname" required>
                     <label for="lname" class="searchbox--label">Prénom</label>
                 </div>
             </div>
             <div class="searchbox">
-                <input class="searchbox--input" id="" name="email" type="email" placeholder="Email">
+                <input class="searchbox--input" id="" name="email" type="email" placeholder="Email" required>
                 <label for="name" class="searchbox--label">Email</label>
             </div>
             <div class="searchbox">
-                <input class="searchbox--input" id="" name="objet" type="input" placeholder="Objet">
+                <input class="searchbox--input" id="" name="objet" type="input" placeholder="Objet" required>
                 <label for="name" class="searchbox--label">Objet</label>
             </div>
             <div class="searchbox">
                 <input class="searchbox--input" id="" name="message" type="input" placeholder="Message">
+                
                 <label for="name" class="searchbox--label">Message</label>
             </div>
-            <button type="submit">Envoyer</button>
+            <input class="form--button" type="submit" name="valider" value="Envoyer">
             
         </form>
         <footer>
@@ -106,5 +110,6 @@
                 </div>
             </div>
         </footer>
+        <script src="../js/contact.js"></script>
     </body>
 </html>
