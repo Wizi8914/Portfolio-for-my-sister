@@ -50,5 +50,120 @@ header {
                 }
             }
         }
+
+        &__checkbox {
+            display: none;
+        }
+
+        label {
+            display: none;
+        }
     }
+}
+
+@media all and (max-width: 650px) {
+    .header_nav {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        background: rgba(0, 0, 0, .6);
+        overflow: hidden;
+        transition: ease-in-out 0.5s;
+
+        &--link {
+            color: rgb(245, 245, 245) !important;
+        }
+
+        &.deployed {
+            width: 100vw;
+        }
+    }
+
+    .header {
+        overflow: hidden;
+        label {
+            display: block !important;
+            align-self: center;
+            margin-right: 20px;
+        }
+
+        &__hamburger {
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            z-index: 2;
+
+            &:hover {
+                cursor: pointer;
+            }
+    
+            .bar {
+                padding: 0;
+                width: 30px;
+                height: 3px;
+                background-color: var(--main-color);
+                display: block;
+                transition: all 0.4s ease-in-out;
+                position: absolute; 
+            }
+        }
+        
+        .bar1 {
+            top: 0;
+        }
+        
+        .bar2,
+        .bar3 {
+            top: 14px;
+        }
+        
+        .bar3 {
+            right: 0;
+        }
+        
+        .bar4 {
+            bottom: 0;
+        }
+    
+        &__checkbox {
+            position: absolute; 
+            overflow: hidden; 
+            clip: rect(0 0 0 0); 
+            height: 1px; width: 1px; 
+            margin: -1px; padding: 0; border: 0;
+    
+            &:checked + label > .header__hamburger > {
+                .bar1 {
+                    transform: rotate(45deg);
+                    transform-origin: 5%;
+                    width: 42px
+                }
+        
+                .bar2 {
+                    transform: translateX(-60px);
+                    background-color: transparent;
+                }
+        
+                .bar3 {
+                    transform: translateX(60px);
+                    background-color: transparent;
+                }
+        
+                .bar4 {
+                    transform-origin: 5%;
+                    transform: rotate(-45deg);
+                    width: 42px;
+                }
+            }
+        }
+    }
+
 }

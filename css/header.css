@@ -42,4 +42,102 @@ header .header_nav--link::before {
 header .header_nav--link:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+header .header__checkbox {
+  display: none;
+}
+header .header label {
+  display: none;
+}
+
+@media all and (max-width: 650px) {
+  .header_nav {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: ease-in-out 0.5s;
+  }
+  .header_nav--link {
+    color: rgb(245, 245, 245) !important;
+  }
+  .header_nav.deployed {
+    width: 100vw;
+  }
+  .header {
+    overflow: hidden;
+  }
+  .header label {
+    display: block !important;
+    align-self: center;
+    margin-right: 20px;
+  }
+  .header__hamburger {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  .header__hamburger:hover {
+    cursor: pointer;
+  }
+  .header__hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--main-color);
+    display: block;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+  }
+  .header .bar1 {
+    top: 0;
+  }
+  .header .bar2,
+  .header .bar3 {
+    top: 14px;
+  }
+  .header .bar3 {
+    right: 0;
+  }
+  .header .bar4 {
+    bottom: 0;
+  }
+  .header__checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  .header__checkbox:checked + label > .header__hamburger > .bar1 {
+    transform: rotate(45deg);
+    transform-origin: 5%;
+    width: 42px;
+  }
+  .header__checkbox:checked + label > .header__hamburger > .bar2 {
+    transform: translateX(-60px);
+    background-color: transparent;
+  }
+  .header__checkbox:checked + label > .header__hamburger > .bar3 {
+    transform: translateX(60px);
+    background-color: transparent;
+  }
+  .header__checkbox:checked + label > .header__hamburger > .bar4 {
+    transform-origin: 5%;
+    transform: rotate(-45deg);
+    width: 42px;
+  }
 }/*# sourceMappingURL=header.css.map */
