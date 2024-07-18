@@ -64,12 +64,25 @@ h2 {
   color: var(--second-color);
 }
 
+.section-line {
+  width: 180px;
+}
+.section-line hr {
+  background-color: var(--main-color);
+  height: 5px;
+  margin-top: 5px;
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
+  margin-top: 50px;
 }
 .container-top--image {
   width: 55%;
@@ -95,11 +108,89 @@ h2 {
   color: var(--third-color);
   font-size: 2.6rem;
 }
+.container-transition {
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 250px;
+}
 
 .bd-container {
-  margin: 60px 0 40px;
+  margin: 125px 0 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.bd-container-left {
+  display: flex;
+  flex-direction: column;
+}
+.bd-container-left-images {
   display: flex;
 }
-.bd-container--image {
-  width: 400px;
+.bd-container-left-images--image {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  filter: drop-shadow(5px 5px 0px #b8b8b8);
+}
+.bd-container-left--title {
+  font-size: 3.2rem;
+  margin-top: 20px;
+}
+.bd-container-left--text {
+  max-width: 600px;
+  margin: 20px 0;
+}
+.bd-container-right--image {
+  width: 450px;
+}
+
+.jv-container {
+  margin: 125px 0 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 50px;
+}
+.jv-container-left {
+  display: flex;
+  flex-direction: column;
+}
+.jv-container-left-images {
+  display: flex;
+}
+.jv-container-left-images--image {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  filter: drop-shadow(5px 5px 0px #b8b8b8);
+}
+.jv-container-left--title {
+  font-size: 3.2rem;
+  margin-top: 20px;
+}
+.jv-container-left--text {
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+.jv-container-left--avatar {
+  position: absolute;
+  height: 180px;
+  width: auto;
+  top: 10px;
+  z-index: -1;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+.jv-container-left iframe {
+  position: absolute;
+  height: 175px;
+  width: 520px;
+  bottom: -175px;
+}
+.jv-container-right--image {
+  width: 450px;
 }/*# sourceMappingURL=style.css.map */

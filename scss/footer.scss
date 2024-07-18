@@ -187,3 +187,10 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+@media all and (max-width: 370px) {
+    .footer-right-bottom__navbar--link {
+        margin: 0 2px 0 !important;
+    }
+    
+}

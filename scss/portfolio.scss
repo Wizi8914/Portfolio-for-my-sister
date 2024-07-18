@@ -377,4 +377,11 @@ body.no-scroll {
     }
 }
 
+@media all and (max-width: 385px) {
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fill, minmax(7em, 1fr));
+        grid-gap: 15px;
+    } 
+}
+
 
