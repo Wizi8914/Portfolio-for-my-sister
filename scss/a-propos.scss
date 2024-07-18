@@ -1,0 +1,29 @@
+.info-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    align-items: center;
+    
+    &--image {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    &--title {
+        font-size: 2rem;
+        align-self: flex-start;
+        margin: 80px 5% 20px;
+
+    }
+    
+
+    &--text {
+        font-size: 1.2rem;
+        margin: 25px 5% 0;
+
+
+        &:last-child {
+            margin-bottom: 50px;
+        }
+    }
+}
