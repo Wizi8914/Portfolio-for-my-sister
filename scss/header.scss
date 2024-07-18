@@ -141,6 +141,10 @@ header {
             margin: -1px; padding: 0; border: 0;
     
             &:checked + label > .header__hamburger > {
+                .bar {
+                    background-color: rgb(245, 245, 245);
+                }
+
                 .bar1 {
                     transform: rotate(45deg);
                     transform-origin: 5%;

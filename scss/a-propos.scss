@@ -27,3 +27,19 @@
         }
     }
 }
+
+@media all and (max-width: 450px){
+    .info-container--title {
+        font-size: 1.6rem;
+        margin: 80px 0 20px
+    }
+
+    .info-container--text {
+        font-size: 1rem;
+        margin: 25px 0 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

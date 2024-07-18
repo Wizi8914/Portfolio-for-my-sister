@@ -176,5 +176,14 @@ footer {
     .footer {
         margin: 0 20px !important;
     }
-    
+}
+
+@media all and (max-width: 380px) {
+    .footer-left__copyright {
+        font-size: 0.8rem;
+    }
+
+    .footer-right-top__contact {
+        font-size: 0.9rem;
+    }
 }

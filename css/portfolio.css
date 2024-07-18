@@ -263,4 +263,34 @@ body.no-scroll {
   -o-object-fit: contain;
   object-fit: contain;
   background: rgb(37, 37, 37);
+}
+
+@media all and (max-width: 1200px) {
+  .portfolio {
+    margin: 100px 20px 20px;
+  }
+  .lightbox-container__information--description {
+    font-size: 1.2rem;
+  }
+}
+@media all and (max-width: 720px) {
+  .portfolio-container {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-gap: 15px;
+  }
+  .lightbox-container {
+    flex-direction: column;
+    height: 85%;
+    width: 55%;
+  }
+  .lightbox-container--image {
+    width: 100%;
+  }
+  .lightbox-container__information--title {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+  }
+  .lightbox-container__information--description {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=portfolio.css.map */

@@ -99,3 +99,17 @@
         color: var(--third-color);
     }
 }
+
+@media all and (max-width: 560px){
+    .form {
+        background: transparent;
+        box-shadow: none;
+
+        &-title {
+            font-size: 1.6rem;
+        }
+
+    }
+    
+
+}

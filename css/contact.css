@@ -94,4 +94,14 @@
   transition: 0.2s;
   font-size: 1rem;
   color: var(--third-color);
+}
+
+@media all and (max-width: 560px) {
+  .form {
+    background: transparent;
+    box-shadow: none;
+  }
+  .form-title {
+    font-size: 1.6rem;
+  }
 }/*# sourceMappingURL=contact.css.map */
