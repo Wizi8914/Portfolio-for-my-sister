@@ -123,11 +123,16 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   background-color: var(--bg-color);
   padding: 20px;
 }
 .lightbox-container__information--title {
   margin-bottom: 10px;
+  font-size: 1.6vw;
+}
+.lightbox-container__information--information {
+  margin: 10px 0;
 }
 .lightbox-container__information--description {
   margin-bottom: 10px;
@@ -273,22 +278,26 @@ body.no-scroll {
     font-size: 1.2rem;
   }
 }
-@media all and (max-width: 720px) {
+@media all and (max-width: 850px) {
   .portfolio-container {
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     grid-gap: 15px;
   }
+  .carousel-container {
+    height: 100%;
+    width: 100%;
+  }
   .lightbox-container {
     flex-direction: column;
     height: 85%;
-    width: 55%;
+    width: 60%;
   }
   .lightbox-container--image {
     width: 100%;
   }
   .lightbox-container__information--title {
-    font-size: 1.6rem;
     margin-bottom: 5px;
+    font-size: 4vw;
   }
   .lightbox-container__information--description {
     font-size: 1rem;

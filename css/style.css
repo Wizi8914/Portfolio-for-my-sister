@@ -69,16 +69,37 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 40vh;
+  position: relative;
 }
-.container_name--title {
+.container-top--image {
+  width: 55%;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.8;
+  filter: drop-shadow(5px 5px 0px #b8b8b8);
+}
+.container-top_name {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+}
+.container-top_name--title {
   color: var(--main-color);
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-.container_name--subtitle {
+.container-top_name--subtitle {
   text-transform: uppercase;
   color: var(--third-color);
-  font-size: 1.6rem;
+  font-size: 2.6rem;
+}
+
+.bd-container {
+  margin: 60px 0 40px;
+  display: flex;
+}
+.bd-container--image {
+  width: 400px;
 }/*# sourceMappingURL=style.css.map */
