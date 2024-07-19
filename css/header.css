@@ -69,6 +69,9 @@ header .header label {
   .header_nav--link {
     color: rgb(245, 245, 245) !important;
   }
+  .header_nav--link::before {
+    background-color: rgb(245, 245, 245) !important;
+  }
   .header_nav.deployed {
     width: 100vw;
   }

@@ -79,6 +79,10 @@ header {
 
         &--link {
             color: rgb(245, 245, 245) !important;
+
+            &::before {
+                background-color: rgb(245, 245, 245) !important;
+            }
         }
 
         &.deployed {
