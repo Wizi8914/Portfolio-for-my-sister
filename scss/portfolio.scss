@@ -377,6 +377,30 @@ body.no-scroll {
     }
 }
 
+@media all and (max-width: 550px) {
+    .lightbox-right, .lightbox-left {
+        font-size: 4em;
+    }
+
+    .lightbox-container {
+        width: 70%;
+    }
+}
+
+
+@media all and (max-width: 400px) {
+    .lightbox-right, .lightbox-left {
+        font-size: 3em;
+    }
+
+    .lightbox-container {
+        height: 80%;
+        width: 75%;
+    }
+    
+}
+
+
 @media all and (max-width: 385px) {
     .portfolio-container {
         grid-template-columns: repeat(auto-fill, minmax(7em, 1fr));
