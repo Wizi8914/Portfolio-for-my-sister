@@ -359,6 +359,18 @@ h2 {
   .container-transition {
     font-size: 2.5rem;
   }
+  .bd-container-left--title {
+    font-size: 2.4rem;
+  }
+  .bd-container-left--text {
+    max-width: 300px;
+  }
+  .bd-container-left-images--image {
+    width: 100px;
+  }
+  .bd-container-right--image {
+    width: 340px;
+  }
   .jv-container-left {
     max-width: 300px;
   }
