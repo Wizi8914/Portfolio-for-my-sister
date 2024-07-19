@@ -210,6 +210,9 @@ h2 {
   .bd-container-left--title {
     text-align: center;
   }
+  .bd-container-left-images--image {
+    margin: 0 10px;
+  }
   .bd-container-right--image {
     width: 500px;
   }
@@ -273,6 +276,32 @@ h2 {
     font-size: 2rem;
   }
 }
+@media all and (max-width: 600px) {
+  .container-transition {
+    margin-top: 300px;
+  }
+  .jv-container-left {
+    max-width: 400px;
+  }
+  .jv-container-left--avatar {
+    height: 100px;
+  }
+  .jv-container-left-images--image {
+    width: 75px;
+  }
+}
+@media all and (max-width: 550px) {
+  .container-transition {
+    margin-top: 350px;
+  }
+  .bd-container-left--text {
+    max-width: 400px;
+    margin: 30px 0 40px;
+  }
+  .bd-container-left-images--image {
+    width: 120px;
+  }
+}
 @media all and (max-width: 530px) {
   .container-top_name--title {
     font-size: 3.5rem;
@@ -283,5 +312,63 @@ h2 {
   .jv-container iframe {
     height: 175px;
     width: 200px;
+  }
+}
+@media all and (max-width: 500px) {
+  .container {
+    margin-top: 150px;
+  }
+  .container-transition {
+    margin-top: 350px;
+  }
+  .bd-container-left--title {
+    font-size: 2.8rem;
+  }
+  .bd-container-left--text {
+    max-width: 350px;
+  }
+  .bd-container-left-images--image {
+    width: 100px;
+  }
+  .bd-container-right--image {
+    width: 340px;
+  }
+  .jv-container-left {
+    max-width: 350px;
+  }
+  .jv-container-left--title {
+    font-size: 2.8rem;
+  }
+  .jv-container-left--avatar {
+    height: 80px;
+  }
+  .jv-container-left-images--image {
+    width: 60px;
+  }
+}
+@media all and (max-width: 430px) {
+  .container-top--image {
+    width: 60%;
+  }
+  .container-top_name--title {
+    font-size: 3rem;
+  }
+  .container-top_name--subtitle {
+    font-size: 1.4rem;
+  }
+  .container-transition {
+    font-size: 2.5rem;
+  }
+  .jv-container-left {
+    max-width: 300px;
+  }
+  .jv-container-left--title {
+    font-size: 2.4rem;
+  }
+  .jv-container-left--avatar {
+    height: 60px;
+  }
+  .jv-container-left-images--image {
+    width: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
