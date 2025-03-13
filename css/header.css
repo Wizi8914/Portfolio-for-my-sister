@@ -23,7 +23,7 @@ header .header_nav--link {
   color: var(--nav-text-color);
   font-size: 1.4rem;
   position: relative;
-  margin: 0 10px 0;
+  margin: 0 10px;
   transition: color 0.3s;
 }
 header .header_nav--link::before {
@@ -146,4 +146,4 @@ header .header label {
     transform: rotate(-45deg);
     width: 42px;
   }
-}/*# sourceMappingURL=header.css.map */
+}

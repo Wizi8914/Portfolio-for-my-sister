@@ -140,7 +140,6 @@ body.no-scroll {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: min-content;
         height: 90%;
         width: 70%;
         position: relative;
@@ -302,7 +301,7 @@ body.no-scroll {
         background-color: #fafafa;
         cursor: pointer;
         opacity: 0.35;
-        margin: 0 2.5px 0 2.5px;
+        margin: 0 2.5px;
     
         &:hover {
             opacity: 0.75;
