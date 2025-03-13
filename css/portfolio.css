@@ -113,8 +113,6 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -moz-min-content;
-  width: min-content;
   height: 90%;
   width: 70%;
   position: relative;
@@ -252,7 +250,7 @@ body.no-scroll {
   background-color: #fafafa;
   cursor: pointer;
   opacity: 0.35;
-  margin: 0 2.5px 0 2.5px;
+  margin: 0 2.5px;
 }
 .carousel__indicator:hover {
   opacity: 0.75;
@@ -325,4 +323,4 @@ body.no-scroll {
     grid-template-columns: repeat(auto-fill, minmax(7em, 1fr));
     grid-gap: 15px;
   }
-}/*# sourceMappingURL=portfolio.css.map */
+}
