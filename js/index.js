@@ -33,23 +33,42 @@ portfolioSortItem.forEach((item, index) => {
 
         switch (index) {
             case 0:
+                showYears();
                 portfolioItems.forEach(item => {
                     item.style.display = 'block';
                 });
                 break;
             case 1:
+                hideYears();
                 portfolioItems.forEach(item => {
                     if (item.type == 'image') {
                         item.style.display = 'block';
+
+                        showYear(item.getAttribute('date'))
                     } else {
                         item.style.display = 'none';
                     }
                 });
                 break;
             case 2:
+                hideYears();
                 portfolioItems.forEach(item => {
                     if (item.type == 'video') {
                         item.style.display = 'block';
+
+                        showYear(item.getAttribute('date'))
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                break;
+            case 3:
+                hideYears();
+                portfolioItems.forEach(item => {
+                    if (item.type == 'gif') {
+                        item.style.display = 'block';
+
+                        showYear(item.getAttribute('date'))
                     } else {
                         item.style.display = 'none';
                     }
@@ -61,6 +80,30 @@ portfolioSortItem.forEach((item, index) => {
     });
 
 });
+
+function showYears() {
+    const years = document.querySelectorAll('.portfolio-date');
+    years.forEach(year => {
+        year.style.display = 'block';
+    });
+}
+
+function showYear(year) {
+    const years = document.querySelectorAll('.portfolio-date');
+
+    years.forEach(y => {
+        if (y.textContent.trim() == year) {
+            y.style.display = 'block';
+          }
+    });
+};
+
+function hideYears() {
+    const years = document.querySelectorAll('.portfolio-date');
+    years.forEach(year => {
+        year.style.display = 'none';
+    });
+}
 
 lightboxBtn.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -98,9 +141,9 @@ moveLightbox = (direction) => {
     let next = parseInt(actual) + direction;
 
     if (next > itemCount) {
-        next = 1;
-    } else if (next < 1) {
         next = itemCount;
+    } else if (next < 1) {
+        next = 1;
     }
 
     window.location.href = `#img${next}`;
@@ -108,21 +151,21 @@ moveLightbox = (direction) => {
 
 rightArrows.forEach(rightArrow => {
     rightArrow.addEventListener('click', () => {
-        moveLightbox(1);
+        moveLightbox(-1);
     });
 });
 
 leftArrows.forEach(leftArrow => {
     leftArrow.addEventListener('click', () => {
-        moveLightbox(-1);
+        moveLightbox(1);
     });
 });
 
 document.addEventListener('keydown', function(event) {
     if(event.key == 'ArrowRight') {
-        moveLightbox(1);
+        moveLightbox(-1);
     }
     else if(event.key == 'ArrowLeft') {
-        moveLightbox(-1);
+        moveLightbox(1);
     }
 });

@@ -108,6 +108,13 @@ body.no-scroll {
             }
         }
     }
+
+    &-date {
+        margin: 0;
+        font-size: 2rem;
+        margin : 2em 0 0.5em;
+        text-align: center;
+    }
 }
 
 .lightbox {
@@ -275,12 +282,12 @@ body.no-scroll {
         }
     
         &--backward {
-            left: 10px;
+            left: 15px;
             transform: rotate(-135deg);
         }
     
         &--forward {
-            right: 10px;
+            right: 15px;
             transform: rotate(45deg);
         }
     }

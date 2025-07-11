@@ -61,8 +61,8 @@ slideCarousel = (carousel, index) => {
     let crlIndicator = carousels[carousel].children[carousels[carousel].children.length - 1].children;
     let crlSlide = carousels[carousel].children[carousels[carousel].children.length - 2].children;
 
-    carouselButtons[carousel].children[0].href = crlSlide[index].src;
-    carouselButtons[carousel].children[1].href = crlSlide[index].src;    
+    carouselButtons[carousel].children[0].href = `${crlSlide[index].src.split('/').slice(0, -1).join("/")}/full-size/${crlSlide[index].src.split('/').pop().replace(".jpg", ".png")}`;
+    carouselButtons[carousel].children[1].href = `${crlSlide[index].src.split('/').slice(0, -1).join("/")}/full-size/${crlSlide[index].src.split('/').pop().replace(".jpg", ".png")}`;    
 
     for (let i = 0; i < crlActivator.length; i++) {
 
