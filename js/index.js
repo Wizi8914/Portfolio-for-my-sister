@@ -141,9 +141,9 @@ moveLightbox = (direction) => {
     let next = parseInt(actual) + direction;
 
     if (next > itemCount) {
-        next = itemCount;
-    } else if (next < 1) {
         next = 1;
+    } else if (next < 1) {
+        next = itemCount;
     }
 
     window.location.href = `#img${next}`;

@@ -159,6 +159,7 @@ body.no-scroll {
             background-color: var(--bg-color);
             //max-width: 35%;
             padding: 20px;
+            overflow: scroll;
 
             &--title {
                 margin-bottom: 10px;
@@ -190,6 +191,7 @@ body.no-scroll {
             bottom: 0;
             margin: 10px;
             font-size: 2em;
+            z-index: 2;
 
             &--full, &--download {
                 color: var(--main-color);

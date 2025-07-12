@@ -130,6 +130,7 @@ body.no-scroll {
   width: 100%;
   background-color: var(--bg-color);
   padding: 20px;
+  overflow: scroll;
 }
 .lightbox-container__information--title {
   margin-bottom: 10px;
@@ -156,6 +157,7 @@ body.no-scroll {
   bottom: 0;
   margin: 10px;
   font-size: 2em;
+  z-index: 2;
 }
 .lightbox-container__button--full, .lightbox-container__button--download {
   color: var(--main-color);
