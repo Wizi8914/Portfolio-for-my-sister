@@ -135,6 +135,7 @@ body.no-scroll {
 .lightbox-container__information--title {
   margin-bottom: 10px;
   font-size: 1.6vw;
+  text-transform: uppercase;
 }
 .lightbox-container__information--information {
   margin: 10px 0;

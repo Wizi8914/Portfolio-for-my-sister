@@ -57,7 +57,7 @@
 .searchbox--input::placeholder {
   color: transparent;
 }
-.searchbox--input:-moz-placeholder-shown ~ .searchbox--label {
+.searchbox--input:-moz-placeholder ~ .searchbox--label {
   font-size: 1.3rem;
   cursor: text;
   top: 20px;
