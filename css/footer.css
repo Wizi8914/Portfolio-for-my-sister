@@ -8,9 +8,14 @@ footer .footer-left {
   display: flex;
   align-items: center;
 }
+footer .footer-left__logo {
+  overflow: hidden;
+}
 footer .footer-left__logo--img {
   width: 80px;
   height: 80px;
+  filter: drop-shadow(0px 100px 0 var(--main-color));
+  transform: translateY(-100px);
 }
 footer .footer-left__copyright {
   color: var(--nav-text-color);
@@ -109,6 +114,7 @@ footer .footer-right-bottom__navbar--link:hover::before {
   .footer-left__copyright {
     position: absolute;
     bottom: 10px;
+    font-size: 0.8rem;
   }
   .footer-right-top {
     flex-direction: column;
@@ -126,16 +132,26 @@ footer .footer-right-bottom__navbar--link:hover::before {
   }
   .footer-right-bottom__navbar {
     margin-bottom: 40px;
+    font-size: 0.9rem;
+  }
+  .footer-right-bottom__navbar--link {
+    font-size: 0.8rem !important;
   }
 }
 @media all and (max-width: 450px) {
   .footer {
     margin: 0 20px !important;
   }
+  .footer-right-bottom__navbar--link {
+    font-size: 0.8rem !important;
+  }
+  .footer-right-top__contact {
+    font-size: 0.8rem !important;
+  }
 }
 @media all and (max-width: 380px) {
   .footer-left__copyright {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .footer-right-top__contact {
     font-size: 0.9rem;

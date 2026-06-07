@@ -17,18 +17,19 @@ body.no-scroll {
   z-index: 0;
   bottom: 0;
   left: 0;
-  width: 4em;
-  background: #222;
+  width: 5em;
+  background: var(--second-color);
   height: 0.25em;
   mix-blend-mode: initial;
   transition: transform 0.5s ease-in-out;
 }
 .portfolio-sort--item {
   display: inline-block;
-  width: 4em;
+  width: 5em;
   padding: 0.5em 0;
   text-align: center;
   cursor: pointer;
+  color: var(--main-color);
 }
 .portfolio-sort--item:hover {
   color: var(--third-color);
@@ -66,7 +67,7 @@ body.no-scroll {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4em;
-  color: var(--bg-color);
+  color: var(--main-color);
   opacity: 0;
   transition-duration: 0.3s;
 }
@@ -76,11 +77,12 @@ body.no-scroll {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  filter: grayscale(100%);
   transition-duration: 0.3s;
 }
 .portfolio-container__item:hover img {
   transition-duration: 0.3s;
-  filter: brightness(0.6);
+  filter: grayscale(0%);
 }
 .portfolio-container__item:hover i {
   opacity: 1;
@@ -105,15 +107,33 @@ body.no-scroll {
   justify-content: space-around;
   display: flex;
 }
-.lightbox-right, .lightbox-left {
-  font-size: 6em;
+.lightbox-button {
+  width: 35px;
+  height: 35px;
+  align-items: center;
   background: transparent;
-  color: var(--bg-color);
-  cursor: pointer;
-  transition-duration: 0.2s;
 }
-.lightbox-right:hover, .lightbox-left:hover {
-  filter: brightness(0.7);
+.lightbox-button-right, .lightbox-button-left {
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  display: block;
+  cursor: pointer;
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  opacity: 0.35;
+  outline: 0;
+  z-index: -1;
+}
+.lightbox-button-left {
+  transform: translateX(20px) rotate(-135deg);
+}
+.lightbox-button-right {
+  transform: translateX(-20px) rotate(45deg);
+}
+.lightbox-button:hover > .lightbox-button-left, .lightbox-button:hover .lightbox-button-right {
+  opacity: 1;
 }
 .lightbox-container {
   display: flex;
@@ -131,6 +151,7 @@ body.no-scroll {
   background-color: var(--bg-color);
   padding: 20px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 .lightbox-container__information--title {
   margin-bottom: 10px;
@@ -139,6 +160,7 @@ body.no-scroll {
 }
 .lightbox-container__information--information {
   margin: 10px 0;
+  color: var(--third-color);
 }
 .lightbox-container__information--description {
   margin-bottom: 10px;
@@ -180,7 +202,7 @@ body.no-scroll {
   top: 2%;
   width: 2.2em;
   height: 2.2em;
-  color: var(--bg-color);
+  color: var(--main-color);
   border: 0.15em solid var(--bg-color);
   margin: 0.2em;
   display: flex;

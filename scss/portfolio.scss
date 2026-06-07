@@ -11,8 +11,7 @@ body.no-scroll {
     &-sort {
         $underline-height: .5em;
         $transition-duration : .5s;
-        $spacing: 4em;
-
+        $spacing: 5em;
 
         position: relative;
         display: flex;
@@ -26,7 +25,7 @@ body.no-scroll {
             bottom: 0;
             left: 0;
             width: $spacing;
-            background: #222;
+            background: var(--second-color);
             height: calc($underline-height / 2);
             mix-blend-mode: initial;
             transition: transform $transition-duration ease-in-out;
@@ -38,6 +37,7 @@ body.no-scroll {
             padding: .5em 0;
             text-align: center;
             cursor: pointer;
+            color: var(--main-color);
 
             &:hover {
                 color: var(--third-color);
@@ -81,7 +81,7 @@ body.no-scroll {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 4em;
-                color: var(--bg-color);
+                color: var(--main-color);
                 opacity: 0;
                 transition-duration: .3s;
 
@@ -93,13 +93,15 @@ body.no-scroll {
                 height: 100%;
                 object-fit: cover;
                 position: absolute;
+                filter: grayscale(100%);
                 transition-duration: .3s;
             }
 
             &:hover {
                 img {
                     transition-duration: .3s;
-                    filter: brightness(0.6);
+                    //filter: brightness(0.6);
+                    filter: grayscale(0%);
                 }
 
                 i {
@@ -131,17 +133,57 @@ body.no-scroll {
     justify-content: space-around;
     display: flex;
 
-    &-right, &-left {
-        font-size: 6em;
+    &-button {
+        //width: 30px;
+        //height: 30px;
+        width: 35px;
+        height: 35px;
+        align-items: center;
         background: transparent;
-        color: var(--bg-color);
-        cursor: pointer;
-        transition-duration: .2s;
+
+        &-right, &-left {
+            height: 40px;
+            width: 40px;
+            top: 50%;
+            //position: absolute;
+            display: block;
+            cursor: pointer;
+            border-width: 5px 5px 0 0;
+            border-style: solid;
+            border-color: #fafafa;
+            opacity: 0.35;
+            outline: 0;
+            z-index: -1;
+        }
+
+        &-left {
+            transform: translateX(20px) rotate(-135deg);
+        }
+
+        &-right {
+            transform: translateX(-20px) rotate(45deg);
+        }
 
         &:hover {
-            filter: brightness(.7);
+
+            & > .lightbox-button-left, .lightbox-button-right {
+                opacity: 1;
+            }
         }
     }
+
+
+    // &-right, &-left {
+    //     font-size: 6em;
+    //     background: transparent;
+    //     color: var(--bg-color);
+    //     cursor: pointer;
+    //     transition-duration: .2s;
+
+    //     &:hover {
+    //         filter: brightness(.7);
+    //     }
+    // }
 
     &-container {
         display: flex;
@@ -160,6 +202,8 @@ body.no-scroll {
             //max-width: 35%;
             padding: 20px;
             overflow: scroll;
+            overflow-x: hidden;
+
 
             &--title {
                 margin-bottom: 10px;
@@ -169,6 +213,7 @@ body.no-scroll {
 
             &--information {
                 margin: 10px 0;
+                color: var(--third-color);
             }
 
             &--description {
@@ -223,7 +268,7 @@ body.no-scroll {
 
         width: 2.2em;
         height: 2.2em;
-        color: var(--bg-color);
+        color: var(--main-color);
         border: 0.15em solid var(--bg-color);
         margin: 0.2em;
         display: flex;

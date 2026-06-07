@@ -13,9 +13,12 @@ footer {
             align-items: center;
             
             &__logo {
+                overflow: hidden;
                 &--img {
                     width: $footer-logo-size;
                     height: $footer-logo-size;
+                    filter: drop-shadow(0px 100px 0 var(--main-color));
+                    transform: translateY(-100px);
                 }
             }
 
@@ -143,6 +146,7 @@ footer {
             &__copyright {
                 position: absolute;
                 bottom: 10px;
+                font-size: 0.8rem;
             }
         }
 
@@ -166,6 +170,11 @@ footer {
 
                 &__navbar {
                     margin-bottom: 40px;
+                    font-size: 0.9rem;
+
+                    &--link {
+                        font-size: 0.8rem !important;
+                    }
                 }
             }
         }
@@ -175,12 +184,20 @@ footer {
 @media all and (max-width: 450px) {
     .footer {
         margin: 0 20px !important;
+
+        &-right-bottom__navbar--link {
+            font-size: 0.8rem !important;
+        }
+
+        &-right-top__contact {
+            font-size: 0.8rem !important;
+        }
     }
 }
 
 @media all and (max-width: 380px) {
     .footer-left__copyright {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .footer-right-top__contact {

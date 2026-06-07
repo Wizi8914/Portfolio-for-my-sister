@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgb(237, 237, 237);
+  background: var(--second-color);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .form-title {
@@ -25,7 +25,7 @@
   margin-left: 15px;
   width: 100px;
   height: 40px;
-  background: var(--main-color);
+  background: var(--bg-color);
   color: white;
   border: none;
   cursor: pointer;
@@ -70,14 +70,6 @@
 .searchbox--input:required, .searchbox--input:invalid {
   box-shadow: none;
 }
-.searchbox--input:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  -o-border-image: linear-gradient(to right, var(--main-color), #535353);
-     border-image: linear-gradient(to right, var(--main-color), #535353);
-  border-image-slice: 1;
-}
 .searchbox--input:focus ~ .searchbox--label {
   position: absolute;
   top: 0;
@@ -86,6 +78,14 @@
   font-size: 1rem;
   color: var(--main-color);
   font-weight: 700;
+}
+.searchbox--input:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, var(--main-color), #535353);
+     border-image: linear-gradient(to right, var(--main-color), #535353);
+  border-image-slice: 1;
 }
 .searchbox--label {
   position: absolute;

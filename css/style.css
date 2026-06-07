@@ -1,15 +1,18 @@
 :root {
-  --bg-color: #fcfcfc;
-  --main-color: #000000;
+  --bg-color: #584c45;
+  --main-color: #f0e7d7;
   --main-hover-color: #3f3f3f;
-  --second-color: #25161b;
-  --third-color: #4f4c4c;
-  --nav-text-color: #080808;
+  --second-color: #f0e7d7;
+  --third-color: #baa799;
+  --nav-text-color: #f0e7d7;
   --nav-text-hover-color: #4d4d4d;
   --heading-color:
   #181818;
   --small-text-color: #c7c7c7;
   --very-small-text-color: #dbdbdb;
+  --beige: #f0e7d7;
+  --gray-orange: #baa799;
+  --chocolate-brown: #584c45;
 }
 
 @font-face {
@@ -30,6 +33,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: Blosta-Script;
+  src: url("../assets/font/Blosta-Script.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Helvetica-World;
+  src: url("../assets/font/HelveticaWorld-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .warning {
   display: flex;
   align-items: center;
@@ -44,7 +59,7 @@
 }
 
 * {
-  font-family: "GlacialIndifference", sans-serif;
+  font-family: "Helvetica-World", sans-serif;
 }
 
 body {
@@ -60,8 +75,17 @@ h1 {
 }
 
 h2 {
-  font-family: "Bangan-Expanded", serif;
+  font-family: "Blosta-Script", serif;
   color: var(--second-color);
+}
+
+p {
+  text-transform: uppercase;
+  color: var(--nav-text-color);
+}
+
+a {
+  text-transform: uppercase;
 }
 
 .section-line {
@@ -85,15 +109,14 @@ h2 {
   margin-top: 50px;
 }
 .container-top--image {
-  width: 55%;
+  width: 25%;
   height: auto;
   margin: 0 auto;
-  opacity: 0.8;
-  filter: drop-shadow(5px 5px 0px #b8b8b8);
+  filter: grayscale(100%);
 }
 .container-top_name {
   position: absolute;
-  top: 45%;
+  top: 70%;
   left: 0;
   right: 0;
 }
@@ -104,9 +127,9 @@ h2 {
   text-transform: uppercase;
 }
 .container-top_name--subtitle {
-  text-transform: uppercase;
   color: var(--third-color);
-  font-size: 2.2rem;
+  font-size: 5rem;
+  margin-top: -100px;
 }
 .container-transition {
   text-transform: uppercase;
@@ -307,7 +330,8 @@ h2 {
     font-size: 3.5rem;
   }
   .container-top_name--subtitle {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
+    transform: translateY(55px);
   }
   .jv-container iframe {
     height: 175px;
@@ -354,7 +378,8 @@ h2 {
     font-size: 3rem;
   }
   .container-top_name--subtitle {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    transform: translateY(55px);
   }
   .container-transition {
     font-size: 2.5rem;

@@ -27,9 +27,11 @@ videoThumbnails.forEach(video => {
 const portfolioSortItem = document.querySelectorAll('.portfolio-sort--item');
 var underline = document.querySelector(".portfolio-sort--underline");
 
+const BAR_SIZE = 5;
+
 portfolioSortItem.forEach((item, index) => {
     item.addEventListener('click', () => {
-        underline.style.transform = `translateX(${index * 4}em)`;
+    underline.style.transform = `translateX(${index * BAR_SIZE}em)`;
 
         switch (index) {
             case 0:
