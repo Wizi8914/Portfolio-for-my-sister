@@ -1,10 +1,5 @@
-body {
-  overflow: hidden;
-}
-
 .header {
   z-index: 1;
-  background-color: transparent !important;
 }
 
 .info-container {
@@ -17,12 +12,12 @@ body {
   max-width: 500px;
 }
 .info-container--title {
-  font-size: 4rem;
+  font-size: 2.7rem;
   align-self: flex-start;
   margin: 80px 5% 20px;
 }
 .info-container--text {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin: 25px 5% 0;
 }
 .info-container--text:last-child {

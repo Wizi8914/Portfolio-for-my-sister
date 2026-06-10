@@ -80,7 +80,7 @@ body.no-scroll {
   filter: grayscale(100%);
   transition-duration: 0.3s;
 }
-.portfolio-container__item:hover img {
+.portfolio-container__item:hover img, .portfolio-container__item:hover video {
   transition-duration: 0.3s;
   filter: grayscale(0%);
 }
@@ -150,8 +150,6 @@ body.no-scroll {
   width: 100%;
   background-color: var(--bg-color);
   padding: 20px;
-  overflow: scroll;
-  overflow-x: hidden;
 }
 .lightbox-container__information--title {
   margin-bottom: 10px;
@@ -163,8 +161,10 @@ body.no-scroll {
   color: var(--third-color);
 }
 .lightbox-container__information--description {
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   font-size: 1.4rem;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .lightbox-container--image {
   height: 100%;
@@ -268,7 +268,7 @@ body.no-scroll {
 }
 .carousel__indicators {
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
   width: 100%;
   text-align: center;
 }
@@ -324,12 +324,19 @@ body.no-scroll {
   .lightbox-container--image {
     width: 100%;
   }
+  .lightbox-container__information {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
   .lightbox-container__information--title {
     margin-bottom: 5px;
     font-size: 4vw;
   }
   .lightbox-container__information--description {
     font-size: 1rem;
+    overflow: visible;
+    overflow-x: visible;
+    margin-bottom: 10px;
   }
 }
 @media all and (max-width: 550px) {
